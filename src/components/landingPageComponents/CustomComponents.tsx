@@ -47,7 +47,6 @@ export const HeroContent = styled(Box)({
   },
   "@media (max-height: 800px)": {
     marginTop: "50px",
-    width: "100%",
   },
   "@media (max-width: 600px)": {
     marginTop: "50px",
