@@ -8,27 +8,30 @@ import arrowUp from "../../Images/Home/arrowUp.png";
 
 function HomeFirstRowBoxesChild(e) {
   let stopsColor;
+  let seriesColor;
   if (e.whichBox === "istBox") {
     stopsColor = [
       [0, "rgba(101, 155, 235, 0.4) 0%"],
       [1, "rgba(101, 155, 235, 0.0001) 100%)"]
     ]
+    seriesColor= "#659BEB";
   } else if (e.whichBox === "secBox") {
     stopsColor = [
       [0, "rgba(246, 175, 64, 0.4) 0%"],
       [1, "rgba(246, 175, 64, 0.0001) 100%"]
     ]
+    seriesColor= "#F6AF40";
   } else {
     stopsColor = [
       [0, "rgba(164, 240, 178, 0.4) 0%"],
       [1, "rgba(164, 240, 178, 0.0001) 100%"]
     ]
+    seriesColor= "#A4F0B2";
   }
   const options = {
     chart: {
       zoomType: 'x',
       backgroundColor: 'transparent',
-      // backgroundColor: 'RED',
       height: '175px',
       // spacingTop: 0,
       spacingRight: 0,
@@ -37,8 +40,6 @@ function HomeFirstRowBoxesChild(e) {
       marginRight: '-4',
       marginLeft: '-5',
       marginBottom: 0,
-      colors: 'blue',
-      colors: ['blue', "yellow", 'green']
     },
     title: {
       text: '',
@@ -101,13 +102,7 @@ function HomeFirstRowBoxesChild(e) {
       type: 'area',
       name: 'USD to EUR',
       data: chartData,
-      colorByPoint: true,
-      topBar: {
-        enabled: true,
-        color: 'blue',
-        fill: 'red'
-      }
-
+      color: seriesColor,
     }]
   }
   console.log(e.whichBox);
